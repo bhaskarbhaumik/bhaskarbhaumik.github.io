@@ -2,57 +2,74 @@
 <html>
 
 <head>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&display=swap">
+  <!-- <link rel="stylesheet" href="index.css"> -->
+  <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
   <page size="Letter">
     <div class="container">
+      
       <div class="leftPanel">
-        <img alt="BhaskarBhaumik_Profile_Picture" src="Bhaskar_Bhaumik-Profile_Picture-300x300.png" />
+        <div class="ProfileContainer">
+          <img alt="BhaskarBhaumik_Profile_Picture" src="images/avatar/Bhaskar_Bhaumik-Profile_Picture-300x300.png" />
+        </div>
         <div class="details">
           <div class="item bottomLineSeparator">
-            <h2>
-              CONTACT
-            </h2>
             <div class="smallText">
+              <h2>
+                <i class="nf nf-fa-address_book headingIcon" aria-hidden="true"></i>
+                Contact
+              </h2>
               <p>
-                <i class="fa fa-phone contactIcon" aria-hidden="true"></i>
-                +1 (404) 644-7316
+                <i class="nf nf-fa-phone contactIcon" aria-hidden="true"></i>
+                <span id="phone">+1 (404) 644-7316</span>
               </p>
               <p>
-                <i class="fa fa-envelope contactIcon" aria-hidden="true"></i>
+                <i class="nf nf-fa-envelope contactIcon" aria-hidden="true"></i>
                 <a href="mailto:bhaskar.bhaumik@tcs.com">
-                  bhaskar.bhaumik@tcs.com
+                  <span id="email">bhaskar.bhaumik@tcs.com</span>
                 </a>
               </p>
               <p>
-                <i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>
-                Atlanta, Georgia, USA
+                <i class="nf nf-fa-location_dot contactIcon" aria-hidden="true"></i>
+                <a href="https://www.linkedin.com/in/bhaskarbhaumik" target="_blank" rel="noopener">
+                  <span id="location">Atlanta, Georgia, USA</span>
+                </a>
               </p>
               <p>
-                <i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i>
-                <a href="https://www.linkedin.com/in/bhaskarbhaumik" target="_blank">
-                  in/bhaskarbhaumik
+                <i class="nf nf-fa-linkedin_square contactIcon" aria-hidden="true"></i>
+                <a href="https://www.linkedin.com/in/bhaskarbhaumik" target="_blank" rel="noopener">
+                  <span id="linkedin">bhaskarbhaumik</span>
                 </a>
               </p>
-              <!-- <p class="lastParagrafNoMarginBottom">
-                <i class="fa fa-skype contactIcon" aria-hidden="true"></i>
-                <a href="#">
-                  loremipsum
-                </a>
-              </p> -->
             </div>
           </div>
           <div class="item bottomLineSeparator">
-            <h2>
-              SKILLS
-            </h2>
             <div class="smallText">
+              <h2>
+                <i class="nf nf-fa-user headingIcon" aria-hidden="true"></i>
+                About Me
+              </h2>
+              <div id="about">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis, justo sed feugiat pulvinar., quam ipsum tincidunt enim, ac gravida est metus sit amet neque. Curabitur ut arcu ut nunc finibus accumsan id id elit.
+                </p>
+                <p>
+                  Vivamus non magna quis neque viverra finibus quis a tortor.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="smallText">
+              <h2>
+                <i class="nf nf-fa-puzzle_piece headingIcon" aria-hidden="true"></i>
+                Skills
+              </h2>
               <div class="skill">
                 <div>
                   <span>Accounting</span>
@@ -73,78 +90,10 @@
                 </div>
               </div>
 
-              <div class="skill">
-                <div>
-                  <span>Powerpoint</span>
-                </div>
-                <div class="yearsOfExperience">
-                  <span class="alignright">3</span>
-                  <span class="alignleft">years</span>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div>
-                  <span>Accounting</span>
-                </div>
-                <div class="yearsOfExperience">
-                  <span class="alignright">2</span>
-                  <span class="alignleft">years</span>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div>
-                  <span>Marketing</span>
-                </div>
-                <div class="yearsOfExperience">
-                  <span class="alignright">2</span>
-                  <span class="alignleft">years</span>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div>
-                  <span>Photoshop</span>
-                </div>
-                <div class="yearsOfExperience">
-                  <span class="alignright">2</span>
-                  <span class="alignleft">years</span>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div>
-                  <span>French</span>
-                </div>
-                <div class="yearsOfExperience">
-                  <span class="alignright">2</span>
-                  <span class="alignleft">years</span>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div>
-                  <span>English</span>
-                </div>
-                <div class="yearsOfExperience">
-                  <span class="alignright">1</span>
-                  <span class="alignleft">year</span>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div>
-                  <span>Management</span>
-                </div>
-                <div class="yearsOfExperience">
-                  <span>1 year</span>
-                </div>
-              </div>
 
             </div>
           </div>
-          <div class="item">
+          <!-- <div class="item">
             <h2>
               EDUCATION
             </h2>
@@ -159,7 +108,7 @@
                 2010 - 2014
               </p>
             </div>
-          </div>
+          </div> -->
         </div>
 
       </div>
@@ -168,11 +117,9 @@
           <h1>
             Bhaskar Bhaumik
           </h1>
-          <div class="smallText">
-            <h3>
-              Data & AI Leader
-            </h3>
-          </div>
+          <h3>
+            Data & AI Leader
+          </h3>
         </div>
         <div>
           <h2>
@@ -180,9 +127,7 @@
           </h2>
           <div class="smallText">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis, justo sed feugiat pulvinar.,
-              quam ipsum tincidunt enim, ac gravida est metus sit amet neque. Curabitur ut arcu ut nunc finibus accumsan
-              id id elit.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis, justo sed feugiat pulvinar., quam ipsum tincidunt enim, ac gravida est metus sit amet neque. Curabitur ut arcu ut nunc finibus accumsan id id elit.
             </p>
             <p>
               Vivamus non magna quis neque viverra finibus quis a tortor.
@@ -210,15 +155,11 @@
               </div>
               <div class="smallText">
                 <p>
-                  Quisque rutrum mollis ornare. In pharetra diam libero, non interdum dui imperdiet quis. Quisque
-                  aliquam sapien in libero finibus sodales. Mauris id commodo metus. In in laoreet dolor.
+                  Quisque rutrum mollis ornare. In pharetra diam libero, non interdum dui imperdiet quis. Quisque aliquam sapien in libero finibus sodales. Mauris id commodo metus. In in laoreet dolor.
                 </p>
                 <ul>
                   <li>
-                    Integer commodo ullamcorper mauris, id condimentum lorem elementum sed. Etiam rutrum eu elit ut
-                    hendrerit. Vestibulum congue sem ac auctor semper. Aenean quis imperdiet magna. Sed eget ullamcorper
-                    enim. Vestibulum consequat turpis eu neque efficitur blandit sed sit amet neque. Curabitur congue
-                    semper erat nec blandit.
+                    Integer commodo ullamcorper mauris, id condimentum lorem elementum sed. Etiam rutrum eu elit ut hendrerit. Vestibulum congue sem ac auctor semper. Aenean quis imperdiet magna. Sed eget ullamcorper enim. Vestibulum consequat turpis eu neque efficitur blandit sed sit amet neque. Curabitur congue semper erat nec blandit.
                   </li>
                 </ul>
                 <p>
@@ -244,23 +185,17 @@
               </div>
               <div class="smallText">
                 <p>
-                  Morbi rhoncus, tortor vel luctus tincidunt, sapien lacus vehicula augue, vitae ultrices eros diam eget
-                  mauris. Aliquam dictum nulla vel augue tristique bibendum. Pellentesque habitant morbi tristique
-                  senectus et netus et malesuada fames ac turpis egestas.
+                  Morbi rhoncus, tortor vel luctus tincidunt, sapien lacus vehicula augue, vitae ultrices eros diam eget mauris. Aliquam dictum nulla vel augue tristique bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                 </p>
                 <ul>
                   <li>
                     <p>
-                      Phasellus ac accumsan ligula. Morbi quam massa, pellentesque nec nunc nec, consectetur gravida
-                      dolor. Mauris vulputate sagittis pellentesque. Donec luctus lorem luctus purus condimentum, id
-                      ultrices lacus aliquam.
+                      Phasellus ac accumsan ligula. Morbi quam massa, pellentesque nec nunc nec, consectetur gravida dolor. Mauris vulputate sagittis pellentesque. Donec luctus lorem luctus purus condimentum, id ultrices lacus aliquam.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Quisque et lorem sagittis lacus lobortis euismod non id mi. Nulla sed tincidunt libero, placerat
-                      imperdiet magna. Quisque lectus quam, viverra eu congue ut, congue vitae metus. Sed in varius
-                      sapien. Cras et elementum tellus.
+                      Quisque et lorem sagittis lacus lobortis euismod non id mi. Nulla sed tincidunt libero, placerat imperdiet magna. Quisque lectus quam, viverra eu congue ut, congue vitae metus. Sed in varius sapien. Cras et elementum tellus.
                     </p>
                   </li>
                 </ul>
@@ -286,31 +221,23 @@
               </div>
               <div class="smallText">
                 <p>
-                  Maecenas eget semper sapien. Sed convallis nunc egestas dui convallis dictum id nec metus. Donec
-                  vestibulum justo mauris, ac congue lacus tincidunt id. Vivamus rhoncus risus ac ex varius gravida.
-                  Donec eget ullamcorper ipsum.
+                  Maecenas eget semper sapien. Sed convallis nunc egestas dui convallis dictum id nec metus. Donec vestibulum justo mauris, ac congue lacus tincidunt id. Vivamus rhoncus risus ac ex varius gravida. Donec eget ullamcorper ipsum.
                 </p>
 
                 <ul>
                   <li>
                     <p>
-                      Maecenas auctor euismod felis vel semper. Nulla facilisi. Quisque quis odio dui. Morbi venenatis
-                      magna quis libero mollis facilisis. Ut semper, eros eu dictum efficitur, ligula felis aliquet
-                      ante, sed commodo odio nisi a augue.
+                      Maecenas auctor euismod felis vel semper. Nulla facilisi. Quisque quis odio dui. Morbi venenatis magna quis libero mollis facilisis. Ut semper, eros eu dictum efficitur, ligula felis aliquet ante, sed commodo odio nisi a augue.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Curabitur at interdum nunc, nec sodales nulla. Nulla facilisi. Nam egestas risus sed maximus
-                      feugiat. Sed semper arcu ac dui consectetur consectetur. Nulla dignissim nec turpis id rhoncus. In
-                      hac habitasse platea dictumst.
+                      Curabitur at interdum nunc, nec sodales nulla. Nulla facilisi. Nam egestas risus sed maximus feugiat. Sed semper arcu ac dui consectetur consectetur. Nulla dignissim nec turpis id rhoncus. In hac habitasse platea dictumst.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Nunc iaculis mauris nec viverra placerat. Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia curae; Aliquam erat volutpat. Vivamus sed ex et magna volutpat sodales et
-                      sed odio.
+                      Nunc iaculis mauris nec viverra placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam erat volutpat. Vivamus sed ex et magna volutpat sodales et sed odio.
                     </p>
                   </li>
                 </ul>
