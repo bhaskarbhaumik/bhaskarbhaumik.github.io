@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision to Value with COI™ for BT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-[#003f5c] text-white text-center py-12 px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">Vision to Value with Connected Organization Intelligence™ (COI™)</h1>
+        <p class="text-lg md:text-xl text-gray-300">Prepared for TCS Accounts serving the Telecommunications Industry</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        
+        <section id="challenges" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#003f5c]">Navigating BT's Multifaceted Challenges</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-gray-600">BT operates in a complex environment defined by intense competition, high infrastructure costs, and stringent regulatory oversight. These interconnected pressures create significant friction across the value chain, demanding a more intelligent and adaptive operational approach.</p>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-center">
+                    <div class="md:col-span-2 space-y-4">
+                        <div class="bg-red-100 border-l-4 border-red-500 p-4 rounded">
+                            <h4 class="font-bold text-red-700">Intense Competition</h4>
+                            <p class="text-sm text-red-600">Pressure from rivals like Virgin Media O2 and altnets led to a loss of 827,000 broadband lines in FY25.</p>
+                        </div>
+                        <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded">
+                            <h4 class="font-bold text-yellow-700">Network Infrastructure</h4>
+                            <p class="text-sm text-yellow-600">Massive CAPEX for 5G and fiber rollouts strains financial resources and logistical capabilities.</p>
+                        </div>
+                        <div class="bg-blue-100 border-l-4 border-blue-500 p-4 rounded">
+                            <h4 class="font-bold text-blue-700">Cybersecurity & Trust</h4>
+                            <p class="text-sm text-blue-600">Escalating cyber threats require constant vigilance to protect customer data and maintain trust.</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                         <div class="relative w-32 h-32">
+                            <div class="absolute inset-0 border-4 border-[#ff764a] rounded-full animate-ping"></div>
+                            <div class="relative w-full h-full bg-[#003f5c] rounded-full flex items-center justify-center text-white font-bold text-2xl">BT</div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2 space-y-4">
+                         <div class="bg-purple-100 border-l-4 border-purple-500 p-4 rounded">
+                            <h4 class="font-bold text-purple-700">Regulatory Scrutiny</h4>
+                            <p class="text-sm text-purple-600">Ofcom oversight impacts pricing, network access, and service quality, with fines for non-compliance.</p>
+                        </div>
+                        <div class="bg-green-100 border-l-4 border-green-500 p-4 rounded">
+                            <h4 class="font-bold text-green-700">Cost & Revenue</h4>
+                            <p class="text-sm text-green-600">Pressure on traditional revenue streams necessitates operational streamlining and cost reduction.</p>
+                        </div>
+                        <div class="bg-pink-100 border-l-4 border-pink-500 p-4 rounded">
+                            <h4 class="font-bold text-pink-700">Customer Churn</h4>
+                            <p class="text-sm text-pink-600">High churn rates driven by price sensitivity and competitive offers impact profitability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coi-framework" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#003f5c]">The COI™ Framework: A Perpetually Adaptive Enterprise</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-gray-600">TCS Connected Organization Intelligence™ (COI™) provides the blueprint for BT to become a perpetually adaptive enterprise. This means continuously sensing network, customer, and market signals, learning from outcomes, and adapting services and operations in near real-time to protect margins and keep promises.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl mb-3">🤝</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#7a5195]">Human + AI Teaming</h3>
+                    <p class="text-gray-600">Empowering network engineers and customer service agents with AI-driven insights and automation.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl mb-3">🤖</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#bc5090]">Agentic AI Squads</h3>
+                    <p class="text-gray-600">Deploying goal-based agents like a "Churn Reduction Orchestrator" and task-based agents for proactive fault detection.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl mb-3">🔗</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#ef5675]">Cross-Functional Data Fabric</h3>
+                    <p class="text-gray-600">Unifying siloed data from network operations, customer support (e.g., Aimee), and billing into a coherent, real-time view.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl mb-3">🛡️</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#ff764a]">Policy-as-Code Guardrails</h3>
+                    <p class="text-gray-600">Automating compliance with Ofcom regulations and internal governance to prevent costly fines and ensure ethical AI use.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="outcomes" class="mb-16">
+             <h2 class="text-3xl font-bold text-center mb-4 text-[#003f5c]">The Vision: Quantifiable Outcomes for BT</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-gray-600">The vision is an organization that never stagnates. By leveraging COI as its operating system, BT can translate its vast data assets into measurable improvements across the entire value chain, ensuring both network resilience and financial stability.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl text-center mb-4 text-[#7a5195]">Customer Retention</h3>
+                    <p class="text-sm text-gray-600 text-center mb-4">Proactively identifying at-risk customers and deploying personalized retention offers can significantly lower churn.</p>
+                    <div class="chart-container"><canvas id="churnChart"></canvas></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl text-center mb-4 text-[#ef5675]">Network Performance</h3>
+                     <p class="text-sm text-gray-600 text-center mb-4">Moving towards a "Dark NOC" with predictive maintenance reduces outages and improves service reliability.</p>
+                    <div class="chart-container"><canvas id="networkChart"></canvas></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl text-center mb-4 text-[#ffa600]">Operational Efficiency</h3>
+                    <p class="text-sm text-gray-600 text-center mb-4">Automating routine tasks and optimizing resource allocation reduces operational expenditure.</p>
+                    <div class="chart-container"><canvas id="opexChart"></canvas></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="value-ladder" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#003f5c]">Vision-to-Value Ladder</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-gray-600">COI operationalizes the adaptive enterprise through a continuous five-step loop, turning real-time signals into intelligent action and learning.</p>
+            <div class="bg-white p-6 rounded-lg shadow-md overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="p-4 font-bold text-[#003f5c]">Layer</th>
+                            <th class="p-4 font-bold text-[#003f5c]">What it is</th>
+                            <th class="p-4 font-bold text-[#003f5c]">BT Examples</th>
+                            <th class="p-4 font-bold text-[#003f5c]">TCS Solution Accelerators</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold text-[#7a5195]">Sense</td>
+                            <td class="p-4">Unify real-time signals</td>
+                            <td class="p-4">Network traffic, customer support tickets from Aimee, social media sentiment, service provisioning data.</td>
+                            <td class="p-4">Customer Experience Optimization Suite</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold text-[#bc5090]">Decide</td>
+                            <td class="p-4">Reason under constraints</td>
+                            <td class="p-4">"Service Assurance Manager" balancing uptime vs. cost; "Churn Prevention Engine" balancing retention vs. profitability.</td>
+                            <td class="p-4">Decision Fabric™, sim-as-a-service</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold text-[#ef5675]">Act</td>
+                            <td class="p-4">Execute with safety</td>
+                            <td class="p-4">Agents for network traffic rerouting, automated proactive maintenance scheduling, targeted retention offer deployment.</td>
+                            <td class="p-4">TCS TwinX™, Agentic AI bots</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="p-4 font-semibold text-[#ff764a]">Learn</td>
+                            <td class="p-4">Closed-loop improvement</td>
+                            <td class="p-4">A/B guardrails for new tariff plans; uplift attribution for retention campaigns; drift monitors for churn models on the "AI Accelerator" platform.</td>
+                            <td class="p-4">TCS Crystallus™, MLOps accelerators</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold text-[#ffa600]">Assure</td>
+                            <td class="p-4">Always-on governance</td>
+                            <td class="p-4">Network QoS compliance (Ofcom), data privacy-by-design, transparent audit trails for automated decisions.</td>
+                            <td class="p-4">TCS MasterCraft™, Privacy-by-Design Kit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="roadmap" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#003f5c]">3-Horizon Roadmap for Value Realization</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-gray-600">A phased approach ensures that BT can build foundational capabilities quickly and scale value incrementally, locking in benefits at each stage.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#7a5195]">
+                    <h3 class="font-bold text-xl mb-2 text-[#7a5195]">Horizon 1: 0-90 Days</h3>
+                    <p class="font-semibold mb-2">Focus: Foundational Capability</p>
+                    <p class="text-sm text-gray-600 mb-4">Deploy GenAI to enhance customer service agent capabilities and automate initial data ingestion from core systems.</p>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="font-bold text-sm text-[#7a5195]">Value Lock:</p>
+                        <p class="text-sm text-gray-700">15% reduction in average call handling time via AI-powered agent assists for Aimee.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#ef5675]">
+                    <h3 class="font-bold text-xl mb-2 text-[#ef5675]">Horizon 2: 90-180 Days</h3>
+                    <p class="font-semibold mb-2">Focus: Proactive Intervention</p>
+                    <p class="text-sm text-gray-600 mb-4">Launch initial churn prediction models and proactive network fault detection agents on the "AI Accelerator" platform.</p>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="font-bold text-sm text-[#ef5675]">Value Lock:</p>
+                        <p class="text-sm text-gray-700">Proactively prevent 5% of potential service outages and pilot targeted churn prevention campaigns.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-[#ffa600]">
+                    <h3 class="font-bold text-xl mb-2 text-[#ffa600]">Horizon 3: 6-12 Months</h3>
+                    <p class="font-semibold mb-2">Focus: Adaptive Optimization</p>
+                    <p class="text-sm text-gray-600 mb-4">Implement closed-loop learning for dynamic network resource allocation and personalized offer generation.</p>
+                    <div class="bg-gray-100 p-3 rounded">
+                        <p class="font-bold text-sm text-[#ffa600]">Value Lock:</p>
+                        <p class="text-sm text-gray-700">Sustained improvement in network reliability and measurable uplift in ARPU from personalized offers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kpis" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-4 text-[#003f5c]">KPIs & The Business Assurance Loop</h2>
+            <p class="text-center max-w-3xl mx-auto mb-10 text-gray-600">COI provides a framework for continuous monitoring and assurance. A unified view of key performance indicators across domains allows BT to detect drift and trigger automated, safe interventions to stay on track.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-bold text-xl text-center mb-4 text-[#003f5c]">Interconnected Performance Metrics</h3>
+                     <p class="text-sm text-gray-600 text-center mb-4">COI enables a holistic view, showing how operational improvements in network uptime directly impact customer NPS and ultimately revenue (ARPU).</p>
+                    <div class="chart-container"><canvas id="kpiRadarChart"></canvas></div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                     <h3 class="font-bold text-xl text-center mb-4 text-[#003f5c]">The Assurance Loop in Action</h3>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#7a5195] text-white flex items-center justify-center font-bold">1</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Detect KPI Drift</h4>
+                            <p class="text-sm text-gray-600">NPS score for new fiber customers drops by 5%.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#bc5090] text-white flex items-center justify-center font-bold">2</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Trigger Policy Suggestion</h4>
+                            <p class="text-sm text-gray-600">COI agent correlates drop with service provisioning delays and suggests prioritizing installations.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#ef5675] text-white flex items-center justify-center font-bold">3</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Safe A/B Testing</h4>
+                            <p class="text-sm text-gray-600">Deploy new scheduling policy to a small customer cohort with automated guardrails.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-[#ff764a] text-white flex items-center justify-center font-bold">4</div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Measure & Scale</h4>
+                            <p class="text-sm text-gray-600">If NPS improves in the test group, the new policy is automatically rolled out across the network.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-[#003f5c] text-white text-center py-6">
+        <p>&copy; 2025 Tata Consultancy Services. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const chartTooltipCallback = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        padding: 20,
+                        boxWidth: 15,
+                        font: {
+                            size: 14
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        new Chart(document.getElementById('churnChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Retained Customers', 'Predicted Churn Reduction'],
+                datasets: [{
+                    label: 'Customer Churn',
+                    data: [85, 15],
+                    backgroundColor: ['#003f5c', '#7a5195'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                ...chartTooltipCallback
+            }
+        });
+
+        new Chart(document.getElementById('networkChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Current Uptime', 'Uptime Improvement'],
+                datasets: [{
+                    label: 'Network Reliability',
+                    data: [99.95, 0.05],
+                    backgroundColor: ['#ef5675', '#bc5090'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                ...chartTooltipCallback,
+                plugins: {
+                    ...chartTooltipCallback.plugins,
+                    tooltip: {
+                         ...chartTooltipCallback.plugins.tooltip,
+                        callbacks: {
+                            ...chartTooltipCallback.plugins.tooltip.callbacks,
+                             label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed !== null) {
+                                    label += context.parsed.toFixed(3) + '%';
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        
+        new Chart(document.getElementById('opexChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Current OPEX', 'Target Reduction'],
+                datasets: [{
+                    label: 'Operational Efficiency',
+                    data: [90, 10],
+                    backgroundColor: ['#ffa600', '#ff764a'],
+                    borderColor: '#ffffff',
+                    borderWidth: 4,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '70%',
+                ...chartTooltipCallback
+            }
+        });
+
+        const kpiLabels = [
+            'Customer (NPS, Churn)', 
+            'Revenue (ARPU)', 
+            'Operations (Uptime)', 
+            'Governance (Compliance)', 
+            'Efficiency (Cost/Service)'
+        ].map(wrapLabel);
+        
+        new Chart(document.getElementById('kpiRadarChart'), {
+            type: 'radar',
+            data: {
+                labels: kpiLabels,
+                datasets: [{
+                    label: 'Current State',
+                    data: [6, 7, 8, 9, 6],
+                    fill: true,
+                    backgroundColor: 'rgba(239, 86, 117, 0.2)',
+                    borderColor: '#ef5675',
+                    pointBackgroundColor: '#ef5675',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#ef5675'
+                }, {
+                    label: 'Target State with COI',
+                    data: [9, 8, 9.5, 9.5, 8],
+                    fill: true,
+                    backgroundColor: 'rgba(0, 63, 92, 0.2)',
+                    borderColor: '#003f5c',
+                    pointBackgroundColor: '#003f5c',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#003f5c'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: {
+                            display: true
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10,
+                        pointLabels: {
+                           font: {
+                                size: 12
+                           }
+                        }
+                    }
+                },
+                ...chartTooltipCallback
+            }
+        });
+    </script>
+</body>
+</html>
