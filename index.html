@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <style>
+      body {
+        background-color: #1a1a2e;
+        color: #fff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+      .container {
+        text-align: center;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 12rem;
+        margin: 0;
+        color: #e94560;
+        text-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+        animation: glitch 2s infinite;
+      }
+      h2 {
+        font-size: 2rem;
+        margin-top: -10px;
+        color: #16c79a;
+      }
+      p {
+        font-size: 1.2rem;
+        color: #a0a0a0;
+        margin-bottom: 30px;
+      }
+      a {
+        text-decoration: none;
+        background-color: #e94560;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-weight: bold;
+        transition:
+          background-color 0.3s ease,
+          transform 0.2s ease;
+        display: inline-block;
+      }
+      a:hover {
+        background-color: #16c79a;
+        transform: scale(1.05);
+      }
+      @keyframes glitch {
+        0% {
+          text-shadow: 2px 2px #16c79a;
+        }
+        25% {
+          text-shadow: -2px -2px #0f3460;
+        }
+        50% {
+          text-shadow: 2px -2px #16c79a;
+        }
+        75% {
+          text-shadow: -2px 2px #0f3460;
+        }
+        100% {
+          text-shadow: 2px 2px #16c79a;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>404</h1>
+      <h2>Oops! Page Lost</h2>
+      <p>The page you are looking for doesn't exist or has been moved.</p>
+      <a href="https://linkedin.com/in/bhaskarbhaumik">Take Me Home</a>
+    </div>
+  </body>
+</html>
