@@ -1,0 +1,96 @@
+title: "Bhaskar Bhaumik"
+subtitle: "AI Innovation Leader · Data & Analytics Architect"
+description: "Bhaskar Bhaumik — AI & Data consulting leader, Rapid Build Camp innovator, and enterprise architect based in Atlanta."
+url: "https://bhaskarbhaumik.github.io"
+baseurl: ""
+repository: "bhaskarbhaumik/bhaskarbhaumik.github.io"
+
+remote_theme: mmistakes/minimal-mistakes@4.26.2
+minimal_mistakes_skin: "dark"
+
+# Author info
+author:
+  name: "Bhaskar Bhaumik"
+  avatar: "/assets/img/headshot.jpg"
+  bio: "AI Innovation Leader at TCS. Builder of AI Rapid Build Camps. Enterprise Data & Analytics Architect."
+  location: "Atlanta, Georgia, USA"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/bhaskarbhaumik"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/bhaskarbhaumik"
+    - label: "Hugging Face"
+      icon: "fas fa-fw fa-robot"
+      url: "https://huggingface.co/bbhaskar2025"
+
+# Plugins
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-include-cache
+
+# SEO
+twitter:
+  username: ""
+social:
+  name: "Bhaskar Bhaumik"
+  links:
+    - "https://www.linkedin.com/in/bhaskarbhaumik"
+    - "https://github.com/bhaskarbhaumik"
+
+og_image: /assets/img/og-image.jpg
+
+# Analytics (uncomment and fill in when ready)
+# analytics:
+#   provider: "google-gtag"
+#   google:
+#     tracking_id: "G-XXXXXXXXXX"
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /what-i-build/:name/
+
+# Include _pages
+include:
+  - _pages
+
+# Exclude from output
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - TASK_PLAN.md
+  - TODO.md
+  - compat_patch.rb
+  - .bundle
+  - .git
+  - .github
+  - vendor
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      show_date: true
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: single
+      author_profile: false
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true

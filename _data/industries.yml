@@ -1,0 +1,18 @@
+- name: Retail
+  icon: "🛒"
+  clients_note: "The Home Depot, HD Supply, Macy's, Advance Auto Parts, Genuine Parts Company"
+- name: Telecom
+  icon: "📡"
+  clients_note: "British Telecommunications plc"
+- name: Healthcare & Life Sciences
+  icon: "🏥"
+  clients_note: "Enterprise-scale governance and Responsible AI"
+- name: Travel & Hospitality
+  icon: "✈️"
+  clients_note: "D&A strategy and modernization"
+- name: CPG & Manufacturing
+  icon: "🏭"
+  clients_note: "Analytics transformation"
+- name: Engineering & EPC
+  icon: "⚙️"
+  clients_note: "AI workshop and Agentic AI architecture"

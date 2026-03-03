@@ -1,0 +1,11 @@
+<section class="industries-section">
+  <h2>Industries Served</h2>
+  <div class="industries-grid">
+    {% for industry in site.data.industries %}
+    <div class="industry-chip">
+      <span class="icon">{{ industry.icon }}</span>
+      <span class="label">{{ industry.name }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>

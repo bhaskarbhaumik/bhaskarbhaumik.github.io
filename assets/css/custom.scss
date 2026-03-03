@@ -1,0 +1,183 @@
+---
+---
+// Import theme
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+// ── Design tokens ──────────────────────────────────────
+:root {
+  --bb-navy:    #0D1B2A;
+  --bb-teal:    #00C9A7;
+  --bb-accent:  #E63946;
+  --bb-light:   #F4F6F8;
+  --bb-text:    #CDD6F4;
+  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+}
+
+// ── Hero section ───────────────────────────────────────
+.hero-banner {
+  background: linear-gradient(135deg, var(--bb-navy) 0%, #1a2a4a 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+
+  h1 {
+    font-family: var(--font-sans);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: var(--bb-teal);
+    letter-spacing: 0.02em;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      padding: 0.75rem 1.75rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+
+      &.primary {
+        background: var(--bb-teal);
+        color: var(--bb-navy);
+        &:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,201,167,0.4); }
+      }
+      &.secondary {
+        border: 2px solid var(--bb-teal);
+        color: var(--bb-teal);
+        &:hover { background: rgba(0,201,167,0.1); }
+      }
+    }
+  }
+}
+
+// ── Focus area cards ───────────────────────────────────
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+
+  .focus-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(0,201,167,0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: border-color 0.2s, transform 0.2s;
+
+    &:hover {
+      border-color: var(--bb-teal);
+      transform: translateY(-3px);
+    }
+
+    .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    h3 { color: var(--bb-teal); margin: 0 0 0.5rem; font-size: 1rem; font-weight: 700; }
+    p  { color: var(--bb-text); font-size: 0.9rem; margin: 0; }
+  }
+}
+
+// ── Timeline ───────────────────────────────────────────
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--bb-teal), transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -1.6rem;
+      top: 0.4rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--bb-teal);
+      box-shadow: 0 0 8px var(--bb-teal);
+    }
+
+    .dates { color: var(--bb-teal); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.25rem; }
+    h3 { margin: 0 0 0.25rem; font-size: 1.05rem; }
+    .org { color: #8899aa; font-size: 0.9rem; margin-bottom: 0.5rem; }
+    p { font-size: 0.92rem; }
+  }
+}
+
+// ── Industries strip ────────────────────────────────────
+.industries-section {
+  margin: 2rem 0;
+
+  h2 { color: var(--bb-teal); }
+
+  .industries-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .industry-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(0,201,167,0.08);
+    border: 1px solid rgba(0,201,167,0.25);
+    border-radius: 2rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+
+    .icon { font-size: 1.1rem; }
+    .label { font-weight: 600; color: var(--bb-teal); }
+  }
+}
+
+// ── Resume page ────────────────────────────────────────
+.resume-wrapper {
+  .resume-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    a {
+      padding: 0.6rem 1.4rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-download { background: var(--bb-teal); color: var(--bb-navy); }
+    .btn-print { border: 2px solid var(--bb-teal); color: var(--bb-teal); }
+    .btn-linkedin { border: 2px solid #0A66C2; color: #0A66C2; }
+  }
+
+  .pdf-embed {
+    width: 100%;
+    height: 85vh;
+    border: 1px solid rgba(0,201,167,0.2);
+    border-radius: 8px;
+  }
+}

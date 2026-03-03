@@ -1,0 +1,10 @@
+<div class="timeline">
+  {% for item in site.data.career %}
+  <div class="timeline-item">
+    <div class="dates">{{ item.start }} – {{ item.end }}</div>
+    <h3>{{ item.title }}</h3>
+    <div class="org">{{ item.org }}{% if item.location %} · {{ item.location }}{% endif %}</div>
+    <p>{{ item.summary }}</p>
+  </div>
+  {% endfor %}
+</div>
