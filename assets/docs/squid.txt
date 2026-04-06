@@ -1,0 +1,182 @@
+#
+# Recommended minimum configuration:
+#
+
+# Example rule allowing access from your local networks.
+# Adapt to list your (internal) IP networks from where browsing
+# should be allowed
+acl localnet src 0.0.0.1-0.255.255.255	# RFC 1122 "this" network (LAN)
+acl localnet src 10.0.0.0/8		# RFC 1918 local private network (LAN)
+acl localnet src 100.64.0.0/10		# RFC 6598 shared address space (CGN)
+acl localnet src 169.254.0.0/16 	# RFC 3927 link-local (directly plugged) machines
+acl localnet src 172.16.0.0/12		# RFC 1918 local private network (LAN)
+acl localnet src 172.20.0.0/12		# RFC 1918 local private network (LAN)
+acl localnet src 192.168.0.0/16		# RFC 1918 local private network (LAN)
+acl localnet src fc00::/7       	# RFC 4193 local private network range
+acl localnet src fe80::/10      	# RFC 4291 link-local (directly plugged) machines
+
+
+tcp_outgoing_address 172.18.51.97
+
+acl SSL_ports port 443
+
+acl Safe_ports port 22		# sftp
+acl Safe_ports port 80		# http
+acl Safe_ports port 443		# https
+acl Safe_ports port 445		# Microsoft-DS
+acl Safe_ports port 70		# gopher
+acl Safe_ports port 210		# wais
+acl Safe_ports port 280		# http-mgmt
+acl Safe_ports port 488		# gss-http
+acl Safe_ports port 591		# filemaker
+acl Safe_ports port 777		# multiling http
+acl Safe_ports port 1025-65535	# unregistered ports
+
+#
+# Recommended minimum Access Permission configuration:
+#
+
+visible_hostname tcsbbmbp
+
+# Security headers and request controls
+request_header_access Via deny all
+request_header_access X-Forwarded-For deny all
+request_header_access Cache-Control allow all
+request_header_access Content-Encoding allow all
+request_header_access Content-Length allow all
+request_header_access Content-Type allow all
+
+# Hide squid version
+httpd_suppress_version_string on
+
+# Connection and timeout optimizations
+connect_timeout 10 seconds
+request_timeout 5 minutes
+client_lifetime 1 day
+half_closed_clients on
+
+# DNS settings
+dns_nameservers 8.8.8.8 8.8.4.4
+dns_timeout 10 seconds
+
+# Add DNS caching
+# dns_v4_first on
+positive_dns_ttl 6 hours
+negative_dns_ttl 1 minute
+
+# Add forward timeout
+forward_timeout 4 minutes
+read_timeout 15 minutes
+write_timeout 15 minutes
+
+# Deny requests to certain unsafe ports
+http_access deny !Safe_ports
+
+# Deny CONNECT to other than secure SSL ports
+http_access deny CONNECT !SSL_ports
+
+# Only allow cachemgr access from localhost
+http_access allow localhost manager
+http_access deny manager
+
+# This default configuration only allows localhost requests because a more
+# permissive Squid installation could introduce new attack vectors into the
+# network by proxying external TCP connections to unprotected services.
+http_access allow localhost
+
+# The two deny rules below are unnecessary in this default configuration
+# because they are followed by a "deny all" rule. However, they may become
+# critically important when you start allowing external requests below them.
+
+# Protect web applications running on the same server as Squid. They often
+# assume that only local users can access them at "localhost" ports.
+# http_access deny to_localhost
+
+# Protect cloud servers that provide local users with sensitive info about
+# their server via certain well-known link-local (a.k.a. APIPA) addresses.
+# http_access deny to_linklocal
+
+#
+# INSERT YOUR OWN RULE(S) HERE TO ALLOW ACCESS FROM YOUR CLIENTS
+#
+
+# For example, to allow access from your local networks, you may uncomment the
+# following rule (and/or add rules that match your definition of "local"):
+http_access allow localnet
+
+# And finally deny all other access to this proxy
+http_access deny all
+
+# Squid normally listens to port 3128
+http_port 3128
+
+# TCP connection optimizations
+client_persistent_connections on
+server_persistent_connections on
+# persistent_connection_timeout 120 seconds
+pconn_timeout 120 seconds
+tcp_recv_bufsize 262144 bytes
+tcp_outgoing_tos 0x08
+# tcp_outgoing_mark 0
+
+# Increase connection limits
+client_request_buffer_max_size 512 KB
+request_body_max_size 0
+reply_body_max_size 0
+
+workers 1
+# cpu_affinity_map process_numbers=1,2,3,4 cores=0,1,2,3
+
+# Uncomment and adjust the following to add a disk cache directory.
+cache_dir ufs /opt/homebrew/var/cache/squid 10240 256 256
+
+# Leave coredumps in the first cache dir
+coredump_dir /opt/homebrew/var/cache/squid
+
+# Logging configuration
+access_log stdio:/opt/homebrew/var/log/squid/access.log squid
+cache_log stdio:/opt/homebrew/var/log/squid/cache.log
+cache_store_log none
+logfile_rotate 10
+buffered_logs on
+
+# Log level (0=critical, 1=important, 2=notice, 3=warning, 9=debug)
+debug_options ALL,0
+
+max_filedesc 65535
+
+# Memory cache settings for better performance
+cache_mem 8192 MB
+maximum_object_size_in_memory 128 MB
+memory_replacement_policy heap GDSF
+
+# Add memory pools:
+memory_pools on
+memory_pools_limit 64 MB
+
+# Cache optimization settings
+maximum_object_size 64 MB
+minimum_object_size 0 KB
+cache_swap_low 85
+cache_swap_high 90
+
+# Add range request optimization
+range_offset_limit -1
+quick_abort_min -1 KB
+quick_abort_max 0 KB
+quick_abort_pct 0
+
+# Add pipeline prefetch:
+pipeline_prefetch 2
+
+#
+# Add any of your own refresh_pattern entries above these.
+#
+# Improved refresh patterns for better caching
+refresh_pattern -i \.(gif|png|jpg|jpeg|ico)$ 1440 80% 10080
+refresh_pattern -i \.(iso|avi|wav|mp3|mp4|mpeg|swf|flv|x-flv)$ 10080 80% 43200
+refresh_pattern -i \.(deb|rpm|exe|zip|tar|tgz|ram|rar|bin|pptx|docx|xlsx|tiff)$ 1440 80% 10080
+refresh_pattern -i \.(css|js)$ 1440 40% 10080
+refresh_pattern ^ftp:		1440	20%	10080
+refresh_pattern -i (/cgi-bin/|\?) 0	0%	0
+refresh_pattern .		0	20%	4320
