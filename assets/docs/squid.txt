@@ -16,7 +16,7 @@ acl localnet src fc00::/7       	# RFC 4193 local private network range
 acl localnet src fe80::/10      	# RFC 4291 link-local (directly plugged) machines
 
 
-tcp_outgoing_address 172.18.51.97
+tcp_outgoing_address 10.0.0.2
 
 acl SSL_ports port 443
 
@@ -36,7 +36,7 @@ acl Safe_ports port 1025-65535	# unregistered ports
 # Recommended minimum Access Permission configuration:
 #
 
-visible_hostname tcsbbmbp
+visible_hostname iMacs-iMac
 
 # Security headers and request controls
 request_header_access Via deny all
@@ -128,14 +128,14 @@ workers 1
 # cpu_affinity_map process_numbers=1,2,3,4 cores=0,1,2,3
 
 # Uncomment and adjust the following to add a disk cache directory.
-cache_dir ufs /opt/homebrew/var/cache/squid 10240 256 256
+cache_dir ufs /usr/local/var/cache/squid 10240 256 256
 
 # Leave coredumps in the first cache dir
-coredump_dir /opt/homebrew/var/cache/squid
+coredump_dir /usr/local/var/cache/squid
 
 # Logging configuration
-access_log stdio:/opt/homebrew/var/log/squid/access.log squid
-cache_log stdio:/opt/homebrew/var/log/squid/cache.log
+access_log stdio:/usr/local/var/log/squid/access.log squid
+cache_log stdio:/usr/local/var/log/squid/cache.log
 cache_store_log none
 logfile_rotate 10
 buffered_logs on
